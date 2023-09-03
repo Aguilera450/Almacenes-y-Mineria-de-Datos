@@ -1,0 +1,99 @@
+%\usepackage{arev}
+\usepackage[utf8]{inputenc}
+%\usepackage{cmbright}
+%\usepackage{sansmathfonts}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+%\renewcommand*\familydefault{\sfdefault}
+\usepackage{amsfonts}
+%\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{mathabx}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{tasks}
+\usepackage{mathrsfs}
+\usepackage[dvipsnames*,svgnames,x11names,table,xcdraw]{xcolor}
+\usepackage[margin=2cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{automata,arrows,cd}
+\usepackage{etoolbox,expl3,environ}
+\usepackage{enumerate}
+\usepackage{setspace}
+\usepackage{pdflscape}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{listings} 
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage[hybrid, hashEnumerators,smartEllipses]{markdown}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\titlelabel{\thetitle.\quad}
+
+\setlength{\parindent}{0cm}
+\spacing{1}
+\usemintedstyle{monokai}
+\setminted[python]{escapeinside =||,
+                    mathescape = true, 
+                    frame = lines,
+                    framesep = 2mm,
+                    baselinestretch = 1.2,
+                    bgcolor = black,
+                    fontsize = \footnotesize,
+                    linenos}
+
+%\theoremstyle{definition}
+%\newtheorem*{definition}{Definición}
+
+\NewDocumentCommand{\myrule}{O{1pt} O{2pt} O{black}}{%
+  \par\nobreak % don't break a page here
+  \kern\the\prevdepth % don't take into account the depth of the preceding line
+  \kern#2 % space before the rule
+  {\color{#3}\hrule height #1 width\hsize} % the rule
+  \kern#2 % space after the rule
+  \nointerlineskip % no additional space after the rule
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textbf{Almacenes y Minería de Datos 2024-1 \\ Tarea 01. Información Estratégica}}
+\rhead{\textbf{PostgresandoesoSQLazos}}
+\headheight 35pt
+\renewcommand{\headrulewidth}{0.5pt}
+
+
+
+\newcommand{\om}{\omega}
+\newcommand{\lam}{\lambda}
+\newcommand{\be}{\beta}
+\newcommand{\al}{\alpha}
+\newcommand{\ro}{\rho}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\ex}{\exists}
+\newcommand{\fa}{\forall}
+\newcommand{\nex}{\nexists}
+\newcommand{\vn}{\varnothing}
+\newcommand{\sbq}{\subseteq}
+\newcommand{\spq}{\supseteq}
+\newcommand{\w}{\widehat{\delta}}
+\newcommand{\la}{\Longrightarrow}
+
+\newcommand{\ov}[1]{\overline{#1}}
+
+\newenvironment{sol}{\paragraph{Solución.}}{\hfill$\square$}
+\newenvironment{dem}{\paragraph{Demostración.}}{\hfill$\square$}
+
+\definecolor{azul}{RGB}{218, 232, 252}
