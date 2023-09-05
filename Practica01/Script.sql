@@ -34,3 +34,28 @@ group by p.numProy, p.nombreProy;
 
 /* Consultando vista_proyecto_empleados */
 SELECT * FROM vista_proyecto_empleados;
+
+
+
+
+/* Vista Materializada para la tabla empleado con el CURP y nombre completo */
+CREATE VIEW vm_empleados WITH SCHEMABINDING
+AS select curp, nombre, paterno, materno 
+from dbo.Empleado
+WHERE nombre LIKE 'A%';	
+
+/* Consultando vm_empleados */
+SELECT * FROM vm_empleados;
+
+
+/* Vista Materializada con toda la informacion de los empleados y departamentos */
+CREATE VIEW vm_empleados_departamentos WITH SCHEMABINDING
+as select e.curp, e.nombre, e.paterno, e.materno, e.salario,
+e.genero, e.nacimiento, e.ciudad, e.calle, e.cp, d.numDepto,
+d.nombreDepto, d.fecha
+from dbo.Empleado e 
+join dbo.Departamento d
+on e.numDepto=d.numDepto;
+
+/* Consultando vm_empleados_departamentos */
+SELECT * FROM vm_empleados_departamentos;
