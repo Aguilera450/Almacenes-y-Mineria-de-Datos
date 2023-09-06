@@ -96,3 +96,17 @@ on e.numDepto=d.numDepto;
 
 /* Consultando vm_empleados_departamentos */
 SELECT * FROM vm_empleados_departamentos;
+
+/* Vista Materializada que muestra numProyecto, nombreProyecto, el numero de empleados y el
+numero de horas colaboradas de cada proyecto */
+CREATE VIEW vm_vista_proyecto_empleados WITH SCHEMABINDING
+as select p.numProy, p.nombreProy, 
+count(c.curp) as empleadosEnProyecto,
+sum(c.numHoras) as horasColaboradas
+from dbo.Colaborar c
+join dbo.Proyecto p
+on c.numProy=p.numProy
+group by p.numProy, p.nombreProy;
+
+/* Consultando vm_vista_proyecto_empleados */
+SELECT * FROM vm_vista_proyecto_empleados;
