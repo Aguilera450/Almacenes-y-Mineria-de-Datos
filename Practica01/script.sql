@@ -8,8 +8,8 @@ WHERE nombre LIKE 'A%';
 SELECT * FROM vista_empleados;
 
 /* Insertando datos */
-INSERT INTO vista_empleados (curp, nombre, paterno, materno)
-VALUES ('AIHD674006HIMTWX73', 'Adonis', 'Hernandez', 'Dorantes');
+INSERT INTO empleado (curp, numDepto, nombre, paterno, materno)
+VALUES ('AIHD674006HIMTWX73', 1, 'Adonis', 'Hernandez', 'Dorantes');
 
 /* Eliminando datos */
 DELETE FROM vista_empleados WHERE nombre='Adriaens';
@@ -84,6 +84,13 @@ WHERE nombre LIKE 'A%';
 /* Consultando vm_empleados */
 SELECT * FROM vm_empleados;
 
+/* Eliminando datos */
+DELETE FROM vm_empleados WHERE nombre='Adriaens';
+
+/* Actualizando datos */
+UPDATE vm_empleados
+SET nombre='Andrea', materno='Flores'
+WHERE curp='DCSW398174HTBEHJ30';
 
 /* Vista Materializada con toda la informacion de los empleados y departamentos */
 CREATE VIEW vm_empleados_departamentos WITH SCHEMABINDING
@@ -96,6 +103,19 @@ on e.numDepto=d.numDepto;
 
 /* Consultando vm_empleados_departamentos */
 SELECT * FROM vm_empleados_departamentos;
+
+/* Insertando datos */
+INSERT INTO vm_empleados_departamentos(curp, nombre, paterno, materno, salario, genero,
+nacimiento, ciudad, calle, cp, numDepto, nombreDepto, fecha)
+VALUES ('TLGN333664HDBVKQ20', 274, 'Amalie', 'Vernazza', 'Edelheid', 87959, 'F', '30/06/1978', 'Zac', 'Hovde', 74968, 'Gembucket', '02/08/2022');
+
+/* Eliminando datos */
+DELETE FROM vm_empleados_departamentos WHERE curp='QORI674750HNEFSQ17';
+
+/* Actualizando datos */
+UPDATE vm_empleados_departamentos
+SET nombre='Ken', salario=90077, cp=34781
+WHERE curp='VYQH311652HMEJDK28';
 
 /* Vista Materializada que muestra numProyecto, nombreProyecto, el numero de empleados y el
 numero de horas colaboradas de cada proyecto */
@@ -110,3 +130,15 @@ group by p.numProy, p.nombreProy;
 
 /* Consultando vm_vista_proyecto_empleados */
 SELECT * FROM vm_vista_proyecto_empleados;
+
+/* Insertando datos */
+INSERT INTO vm_vista_proyecto_empleados(numProy, nombreProy, empleadosEnProyecto, horasColaboradas)
+VALUES (1, 'Almacen', 3, 1223);
+
+/* Eliminando datos */
+DELETE FROM vm_vista_proyecto_empleados WHERE nombreProy='Voltsillam';
+
+/* Actualizando datos */
+UPDATE vm_vista_proyecto_empleados
+SET nombreProy='Mineria', empleadosEnProyecto=5
+WHERE numProy=1;
