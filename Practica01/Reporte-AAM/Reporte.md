@@ -5,29 +5,29 @@
 
 Instalamos desde Fedora:
 
-| ![Alt text](./1.png)
+ ![Alt text](./1.png)
 
-| ![Alt text](./2.png)
+ ![Alt text](./2.png)
 
-| ![Alt text](./3.png)
+ ![Alt text](./3.png)
 
-| ![Alt text](./4.png)
+ ![Alt text](./4.png)
 
-| ![Alt text](./5.png)
+ ![Alt text](./5.png)
 
-| ![Alt text](./6.png)
+ ![Alt text](./6.png)
 
-| ![Alt text](./7.png)
+ ![Alt text](./7.png)
 
-| ![Alt text](./8.png)
+ ![Alt text](./8.png)
 
-| ![Alt text](./9.png)
+ ![Alt text](./9.png)
 
-| ![Alt text](./10.png)
+ ![Alt text](./10.png)
 
 ### Creación de directorio compartido
 
-|![Alt text](./ale/11.png)
+|![Alt text](./11.png)
 |:----------------------:|
 
 |![Alt text](./12.png)
