@@ -1,0 +1,2054 @@
+<?xml version="1.0"?>
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="Engineer-PC\Engineer"
+  DTS:CreatorComputerName="ENGINEER-PC"
+  DTS:CreationDate="9/19/2023 10:09:05 AM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{E8F858F9-AA58-4E55-BFCC-6F5DDC480AF1}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="2058"
+  DTS:ObjectName="Package"
+  DTS:DTSID="{333733B5-8819-42F2-B4C4-F4BD71A0425B}"
+  DTS:CreationName="SSIS.Package.3">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV1]"
+      DTS:ObjectName="CSV1"
+      DTS:DTSID="{F77B2BC7-67A8-45FD-B301-A88F43916A11}"
+      DTS:CreationName="FLATFILE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2058"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\Vboxsvr\mv\Viajeros.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="curp"
+              DTS:DTSID="{51AEE24E-F706-4C9F-B221-16B3BC65C283}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nombre"
+              DTS:DTSID="{F46D9A87-FDF8-42A6-91AE-43985FA9DD2E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="apellidoPaterno"
+              DTS:DTSID="{E5BC8ADF-26A0-471D-A7CA-70F5873C94C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="apellidoMaterno"
+              DTS:DTSID="{2455F1FE-BBCE-4807-B544-6C3211E342E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fecha"
+              DTS:DTSID="{F22CC09F-F5A6-40E3-B62E-6D54B343BDC3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV1_2]"
+      DTS:ObjectName="CSV1_2"
+      DTS:DTSID="{34878E4E-CA6B-4037-A274-262A8FA24FB1}"
+      DTS:CreationName="FLATFILE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2058"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\Vboxsvr\mv\Practica3\viajeros1_2.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="curp"
+              DTS:DTSID="{9D0370C7-C446-48D9-BF6B-5FE09FED48A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nombre"
+              DTS:DTSID="{834D6753-AD98-47A3-9D95-F653E3008EA8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="apellidoPaterno"
+              DTS:DTSID="{851CA249-4E20-40F2-9DF5-309F1960FC8F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="apellidoMaterno"
+              DTS:DTSID="{AE58A59F-BFB5-4C10-8DEB-1E66FA07850D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fecha"
+              DTS:DTSID="{E895430C-E453-4C1E-B594-990D7AC7C5B0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV2]"
+      DTS:ObjectName="CSV2"
+      DTS:DTSID="{A2296400-EEDF-41D8-BF9D-3E8347BAAD0B}"
+      DTS:CreationName="FLATFILE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2058"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\Vboxsvr\mv\Viajeros2.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="curp"
+              DTS:DTSID="{17F8965F-7247-47F4-9A49-5A81CCE9E2C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nombre"
+              DTS:DTSID="{1DE5E39F-E0F0-4150-9EC0-61AC819E43AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="aPaterno"
+              DTS:DTSID="{04D871F7-CBA0-4752-8FEB-F284FCE2EDD9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="aMaterno"
+              DTS:DTSID="{EDFDB249-A5F8-48A7-9E16-0AEBCE3D6D21}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fechaNacimiento"
+              DTS:DTSID="{6A395309-3992-4F64-810A-20C3534FB497}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV3]"
+      DTS:ObjectName="CSV3"
+      DTS:DTSID="{BD368B26-5546-47B4-B0C4-EAAD29767952}"
+      DTS:CreationName="FLATFILE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2058"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\Vboxsvr\mv\Viajes.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="curp"
+              DTS:DTSID="{E7716364-709C-4831-98D1-CB8F1CC97E63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="idViaje"
+              DTS:DTSID="{1202840A-A503-4525-AAC5-8EDBEFD03B3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lugar"
+              DTS:DTSID="{0A9F7FEC-D78A-4C00-BB70-2B45C9C0F082}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fecha"
+              DTS:DTSID="{3AB8E524-1DFC-4ACB-ACB2-C9337D5EE22E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV4]"
+      DTS:ObjectName="CSV4"
+      DTS:DTSID="{CF51F6BF-306B-4005-831A-67F41B7394AD}"
+      DTS:CreationName="FLATFILE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2058"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\Vboxsvr\mv\Viajes2.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="curp"
+              DTS:DTSID="{DFEAC3F7-6FB0-4934-B899-905DF2A5ACBC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="idViaje"
+              DTS:DTSID="{4448850C-A3F7-4B5F-9C4A-467CB3F691F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="destino"
+              DTS:DTSID="{F7430666-541E-4CE2-9C26-747F9311EFC9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fecha"
+              DTS:DTSID="{357A88A9-C1B6-4072-979D-D294696B7954}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Viaje1_2]"
+      DTS:ObjectName="Viaje1_2"
+      DTS:DTSID="{A6B96C06-63F0-41F1-9268-1CB3034ADD40}"
+      DTS:CreationName="FLATFILE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2058"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\Vboxsvr\mv\Practica3\viajes1_2.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="curp"
+              DTS:DTSID="{A9CE55A9-F43B-43F0-9ABE-3A8BE570E2E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="idViaje"
+              DTS:DTSID="{77E69996-41DF-46A8-B43B-F38CF02B8AC2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lugar"
+              DTS:DTSID="{7BFF41AB-8FF1-4736-98D4-FFA35BBA834E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fecha"
+              DTS:DTSID="{63FB3D4E-1AC7-413F-8151-B5F8EAFC8E7D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos"
+      DTS:ExecutableType="{5918251B-2970-45A4-AB5F-01C3C588FE5A}"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos"
+      DTS:DTSID="{D4ED4F34-4036-4A9D-81D9-08241D579841}"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:CreationName="{5918251B-2970-45A4-AB5F-01C3C588FE5A}">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos\Destino de archivo plano"
+              name="Destino de archivo plano"
+              componentClassID="{8DA75FED-1B7C-407D-B2AD-2B24209CCCA4}"
+              description="Destino de archivo plano"
+              localeId="2058"
+              contactInfo="Destino de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0">
+              <properties>
+                <property
+                  name="Overwrite"
+                  dataType="System.Boolean"
+                  description="Especifica si los datos sobrescriben el archivo de destino o se anexan al mismo.">true</property>
+                <property
+                  name="Header"
+                  dataType="System.Null"
+                  description="Especifica el texto para escribir en el archivo de destino antes de escribir ningún dato."
+                  expressionType="Notify" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Destino de archivo plano.Connections[FlatFileConnection]"
+                  name="FlatFileConnection"
+                  connectionManagerID="Package.ConnectionManagers[CSV1_2]"
+                  connectionManagerRefId="Package.ConnectionManagers[CSV1_2]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]"
+                  name="Entrada de destino de archivo plano"
+                  hasSideEffects="true">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[curp]"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[curp]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[curp]"
+                      cachedName="curp"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[nombre]"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[nombre]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[nombre]"
+                      cachedName="nombre"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[apellidoPaterno]"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[apellidoPaterno]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[apellidoPaterno]"
+                      cachedName="apellidoPaterno"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[apellidoMaterno]"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[apellidoMaterno]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[apellidoMaterno]"
+                      cachedName="apellidoMaterno"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[fecha]"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[fecha]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[fecha]"
+                      cachedName="fecha"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[curp]"
+                      name="curp"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[nombre]"
+                      name="nombre"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[apellidoPaterno]"
+                      name="apellidoPaterno"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[apellidoMaterno]"
+                      name="apellidoMaterno"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[fecha]"
+                      name="fecha"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Destino de archivo plano 1"
+              name="Destino de archivo plano 1"
+              componentClassID="{8DA75FED-1B7C-407D-B2AD-2B24209CCCA4}"
+              description="Destino de archivo plano"
+              localeId="2058"
+              contactInfo="Destino de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0">
+              <properties>
+                <property
+                  name="Overwrite"
+                  dataType="System.Boolean"
+                  description="Especifica si los datos sobrescriben el archivo de destino o se anexan al mismo.">true</property>
+                <property
+                  name="Header"
+                  dataType="System.Null"
+                  description="Especifica el texto para escribir en el archivo de destino antes de escribir ningún dato."
+                  expressionType="Notify" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Connections[FlatFileConnection]"
+                  name="FlatFileConnection"
+                  connectionManagerID="Package.ConnectionManagers[Viaje1_2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Viaje1_2]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano]"
+                  name="Entrada de destino de archivo plano"
+                  hasSideEffects="true">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].Columns[curp]"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[curp]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].ExternalColumns[curp]"
+                      cachedName="curp"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].Columns[idViaje]"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[idViaje]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].ExternalColumns[idViaje]"
+                      cachedName="idViaje"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].Columns[lugar]"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[lugar]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].ExternalColumns[lugar]"
+                      cachedName="lugar"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].Columns[fecha]"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[fecha]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].ExternalColumns[fecha]"
+                      cachedName="fecha"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].ExternalColumns[curp]"
+                      name="curp"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].ExternalColumns[idViaje]"
+                      name="idViaje"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].ExternalColumns[lugar]"
+                      name="lugar"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano].ExternalColumns[fecha]"
+                      name="fecha"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Unión Viajeros"
+              name="Unión Viajeros"
+              componentClassID="{B594E9A8-4351-4939-891C-CFE1AB93E925}"
+              description="Combina las filas de varios flujos de datos sin ordenarlos. Por ejemplo, devuelve filas a un flujo de datos después de corregir los errores. Si el orden es importante, se recomienda usar la transformación Mezclar."
+              version="1"
+              contactInfo="Unión de todo;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 1]"
+                  name="Entrada de Unión de todo 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 1].Columns[curp]"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[curp]"
+                      cachedName="curp"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[curp]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 1].Columns[nombre]"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[nombre]"
+                      cachedName="nombre"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[nombre]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 1].Columns[apellidoPaterno]"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[apellidoPaterno]"
+                      cachedName="apellidoPaterno"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[apellidoPaterno]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 1].Columns[apellidoMaterno]"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[apellidoMaterno]"
+                      cachedName="apellidoMaterno"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[apellidoMaterno]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 1].Columns[fecha]"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[fecha]"
+                      cachedName="fecha"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[fecha]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 2]"
+                  name="Entrada de Unión de todo 2"
+                  hasSideEffects="true">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 2].Columns[curp]"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[curp]"
+                      cachedName="curp"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[curp]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 2].Columns[nombre]"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[nombre]"
+                      cachedName="nombre"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[nombre]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 2].Columns[aPaterno]"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[aPaterno]"
+                      cachedName="aPaterno"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[apellidoPaterno]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 2].Columns[aMaterno]"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[aMaterno]"
+                      cachedName="aMaterno"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[apellidoMaterno]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 2].Columns[fechaNacimiento]"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[fechaNacimiento]"
+                      cachedName="fechaNacimiento"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[fecha]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 3]"
+                  name="Entrada de Unión de todo 3"
+                  hasSideEffects="true"
+                  dangling="true">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1]"
+                  name="Salida de Unión de todo 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[curp]"
+                      name="curp"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[curp]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[nombre]"
+                      name="nombre"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[nombre]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[apellidoPaterno]"
+                      name="apellidoPaterno"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[apellidoPaterno]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[apellidoMaterno]"
+                      name="apellidoMaterno"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[apellidoMaterno]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[fecha]"
+                      name="fecha"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1].Columns[fecha]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Unión Viajes"
+              name="Unión Viajes"
+              componentClassID="{B594E9A8-4351-4939-891C-CFE1AB93E925}"
+              description="Combina las filas de varios flujos de datos sin ordenarlos. Por ejemplo, devuelve filas a un flujo de datos después de corregir los errores. Si el orden es importante, se recomienda usar la transformación Mezclar."
+              version="1"
+              contactInfo="Unión de todo;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Unión Viajes.Inputs[Entrada de Unión de todo 1]"
+                  name="Entrada de Unión de todo 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajes.Inputs[Entrada de Unión de todo 1].Columns[curp]"
+                      lineageId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].Columns[curp]"
+                      cachedName="curp"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[curp]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajes.Inputs[Entrada de Unión de todo 1].Columns[idViaje]"
+                      lineageId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].Columns[idViaje]"
+                      cachedName="idViaje"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[idViaje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajes.Inputs[Entrada de Unión de todo 1].Columns[lugar]"
+                      lineageId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].Columns[lugar]"
+                      cachedName="lugar"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[lugar]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajes.Inputs[Entrada de Unión de todo 1].Columns[fecha]"
+                      lineageId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].Columns[fecha]"
+                      cachedName="fecha"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[fecha]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Tarea Flujo de datos\Unión Viajes.Inputs[Entrada de Unión de todo 2]"
+                  name="Entrada de Unión de todo 2"
+                  hasSideEffects="true">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajes.Inputs[Entrada de Unión de todo 2].Columns[curp]"
+                      lineageId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].Columns[curp]"
+                      cachedName="curp"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[curp]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajes.Inputs[Entrada de Unión de todo 2].Columns[idViaje]"
+                      lineageId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].Columns[idViaje]"
+                      cachedName="idViaje"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[idViaje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajes.Inputs[Entrada de Unión de todo 2].Columns[fecha]"
+                      lineageId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].Columns[fecha]"
+                      cachedName="fecha"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[fecha]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajes.Inputs[Entrada de Unión de todo 2].Columns[destino]"
+                      lineageId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].Columns[destino]"
+                      cachedName="destino"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedCodepage="1252">
+                      <properties>
+                        <property
+                          name="OutputColumnLineageID"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          containsID="true">#{Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[lugar]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Tarea Flujo de datos\Unión Viajes.Inputs[Entrada de Unión de todo 3]"
+                  name="Entrada de Unión de todo 3"
+                  hasSideEffects="true"
+                  dangling="true">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1]"
+                  name="Salida de Unión de todo 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[curp]"
+                      name="curp"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[curp]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[idViaje]"
+                      name="idViaje"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[idViaje]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[lugar]"
+                      name="lugar"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[lugar]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[fecha]"
+                      name="fecha"
+                      lineageId="Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1].Columns[fecha]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Viajeros1"
+              name="Viajeros1"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              description="Origen de archivo plano"
+              localeId="2058"
+              usesDispositions="true"
+              version="1"
+              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="RetainNulls"
+                  dataType="System.Boolean"
+                  description="Especifica si las columnas de longitud cero se tratan como NULL.">false</property>
+                <property
+                  name="FileNameColumnName"
+                  dataType="System.String"
+                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Viajeros1.Connections[FlatFileConnection]"
+                  name="FlatFileConnection"
+                  connectionManagerID="Package.ConnectionManagers[CSV1]"
+                  connectionManagerRefId="Package.ConnectionManagers[CSV1]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano]"
+                  name="Salida de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[curp]"
+                      name="curp"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[curp]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].ExternalColumns[curp]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[nombre]"
+                      name="nombre"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[nombre]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].ExternalColumns[nombre]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[apellidoPaterno]"
+                      name="apellidoPaterno"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[apellidoPaterno]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].ExternalColumns[apellidoPaterno]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[apellidoMaterno]"
+                      name="apellidoMaterno"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[apellidoMaterno]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].ExternalColumns[apellidoMaterno]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[fecha]"
+                      name="fecha"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].Columns[fecha]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].ExternalColumns[fecha]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].ExternalColumns[curp]"
+                      name="curp"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].ExternalColumns[nombre]"
+                      name="nombre"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].ExternalColumns[apellidoPaterno]"
+                      name="apellidoPaterno"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].ExternalColumns[apellidoMaterno]"
+                      name="apellidoMaterno"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano].ExternalColumns[fecha]"
+                      name="fecha"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de error de origen de archivo plano]"
+                  name="Salida de error de origen de archivo plano"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      name="Columna de salida de error de origen de archivo plano"
+                      description="Columna de salida de error de origen de archivo plano"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      dataType="text"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Viajeros2"
+              name="Viajeros2"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              description="Origen de archivo plano"
+              localeId="2058"
+              usesDispositions="true"
+              version="1"
+              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="RetainNulls"
+                  dataType="System.Boolean"
+                  description="Especifica si las columnas de longitud cero se tratan como NULL.">false</property>
+                <property
+                  name="FileNameColumnName"
+                  dataType="System.String"
+                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Viajeros2.Connections[FlatFileConnection]"
+                  name="FlatFileConnection"
+                  connectionManagerID="Package.ConnectionManagers[CSV2]"
+                  connectionManagerRefId="Package.ConnectionManagers[CSV2]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano]"
+                  name="Salida de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[curp]"
+                      name="curp"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[curp]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].ExternalColumns[curp]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[nombre]"
+                      name="nombre"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[nombre]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].ExternalColumns[nombre]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[aPaterno]"
+                      name="aPaterno"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[aPaterno]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].ExternalColumns[aPaterno]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[aMaterno]"
+                      name="aMaterno"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[aMaterno]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].ExternalColumns[aMaterno]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[fechaNacimiento]"
+                      name="fechaNacimiento"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].Columns[fechaNacimiento]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].ExternalColumns[fechaNacimiento]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].ExternalColumns[curp]"
+                      name="curp"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].ExternalColumns[nombre]"
+                      name="nombre"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].ExternalColumns[aPaterno]"
+                      name="aPaterno"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].ExternalColumns[aMaterno]"
+                      name="aMaterno"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano].ExternalColumns[fechaNacimiento]"
+                      name="fechaNacimiento"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de error de origen de archivo plano]"
+                  name="Salida de error de origen de archivo plano"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      name="Columna de salida de error de origen de archivo plano"
+                      description="Columna de salida de error de origen de archivo plano"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      dataType="text"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Viajes1"
+              name="Viajes1"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              description="Origen de archivo plano"
+              localeId="2058"
+              usesDispositions="true"
+              version="1"
+              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="RetainNulls"
+                  dataType="System.Boolean"
+                  description="Especifica si las columnas de longitud cero se tratan como NULL.">false</property>
+                <property
+                  name="FileNameColumnName"
+                  dataType="System.String"
+                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Viajes1.Connections[FlatFileConnection]"
+                  name="FlatFileConnection"
+                  connectionManagerID="Package.ConnectionManagers[CSV3]"
+                  connectionManagerRefId="Package.ConnectionManagers[CSV3]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano]"
+                  name="Salida de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].Columns[curp]"
+                      name="curp"
+                      lineageId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].Columns[curp]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].ExternalColumns[curp]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].Columns[idViaje]"
+                      name="idViaje"
+                      lineageId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].Columns[idViaje]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].ExternalColumns[idViaje]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].Columns[lugar]"
+                      name="lugar"
+                      lineageId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].Columns[lugar]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].ExternalColumns[lugar]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].Columns[fecha]"
+                      name="fecha"
+                      lineageId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].Columns[fecha]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].ExternalColumns[fecha]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].ExternalColumns[curp]"
+                      name="curp"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].ExternalColumns[idViaje]"
+                      name="idViaje"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].ExternalColumns[lugar]"
+                      name="lugar"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano].ExternalColumns[fecha]"
+                      name="fecha"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de error de origen de archivo plano]"
+                  name="Salida de error de origen de archivo plano"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      name="Columna de salida de error de origen de archivo plano"
+                      description="Columna de salida de error de origen de archivo plano"
+                      lineageId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      dataType="text"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Viajes2"
+              name="Viajes2"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              description="Origen de archivo plano"
+              localeId="2058"
+              usesDispositions="true"
+              version="1"
+              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="RetainNulls"
+                  dataType="System.Boolean"
+                  description="Especifica si las columnas de longitud cero se tratan como NULL.">false</property>
+                <property
+                  name="FileNameColumnName"
+                  dataType="System.String"
+                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Viajes2.Connections[FlatFileConnection]"
+                  name="FlatFileConnection"
+                  connectionManagerID="Package.ConnectionManagers[CSV4]"
+                  connectionManagerRefId="Package.ConnectionManagers[CSV4]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano]"
+                  name="Salida de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].Columns[curp]"
+                      name="curp"
+                      lineageId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].Columns[curp]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].ExternalColumns[curp]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].Columns[idViaje]"
+                      name="idViaje"
+                      lineageId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].Columns[idViaje]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].ExternalColumns[idViaje]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].Columns[destino]"
+                      name="destino"
+                      lineageId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].Columns[destino]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].ExternalColumns[destino]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].Columns[fecha]"
+                      name="fecha"
+                      lineageId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].Columns[fecha]"
+                      length="50"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].ExternalColumns[fecha]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario.">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].ExternalColumns[curp]"
+                      name="curp"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].ExternalColumns[idViaje]"
+                      name="idViaje"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].ExternalColumns[destino]"
+                      name="destino"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano].ExternalColumns[fecha]"
+                      name="fecha"
+                      dataType="str"
+                      length="50"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de error de origen de archivo plano]"
+                  name="Salida de error de origen de archivo plano"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      name="Columna de salida de error de origen de archivo plano"
+                      description="Columna de salida de error de origen de archivo plano"
+                      lineageId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      dataType="text"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano3]"
+              name="Salida de origen de archivo plano"
+              startId="Package\Tarea Flujo de datos\Viajes2.Outputs[Salida de origen de archivo plano]"
+              endId="Package\Tarea Flujo de datos\Unión Viajes.Inputs[Entrada de Unión de todo 2]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano2]"
+              name="Salida de origen de archivo plano"
+              startId="Package\Tarea Flujo de datos\Viajes1.Outputs[Salida de origen de archivo plano]"
+              endId="Package\Tarea Flujo de datos\Unión Viajes.Inputs[Entrada de Unión de todo 1]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
+              name="Salida de origen de archivo plano"
+              startId="Package\Tarea Flujo de datos\Viajeros1.Outputs[Salida de origen de archivo plano]"
+              endId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 1]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano1]"
+              name="Salida de origen de archivo plano"
+              startId="Package\Tarea Flujo de datos\Viajeros2.Outputs[Salida de origen de archivo plano]"
+              endId="Package\Tarea Flujo de datos\Unión Viajeros.Inputs[Entrada de Unión de todo 2]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de Unión de todo 11]"
+              name="Salida de Unión de todo 1"
+              startId="Package\Tarea Flujo de datos\Unión Viajes.Outputs[Salida de Unión de todo 1]"
+              endId="Package\Tarea Flujo de datos\Destino de archivo plano 1.Inputs[Entrada de destino de archivo plano]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de Unión de todo 1]"
+              name="Salida de Unión de todo 1"
+              startId="Package\Tarea Flujo de datos\Unión Viajeros.Outputs[Salida de Unión de todo 1]"
+              endId="Package\Tarea Flujo de datos\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="sql11">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Tarea Flujo de datos"
+          TopLeft="232.5,142.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Tarea Flujo de datos\Viajeros1"
+          TopLeft="238.5,111.5" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Tarea Flujo de datos\Viajeros2"
+          TopLeft="416.5,113.5" />
+        <NodeLayout
+          Size="114,42"
+          Id="Package\Tarea Flujo de datos\Viajes1"
+          TopLeft="566.5,114.5" />
+        <NodeLayout
+          Size="114,42"
+          Id="Package\Tarea Flujo de datos\Viajes2"
+          TopLeft="716.5,115.5" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Tarea Flujo de datos\Destino de archivo plano"
+          TopLeft="290,356" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Tarea Flujo de datos\Unión Viajeros"
+          TopLeft="315.5,250.734762979684" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
+          TopLeft="300,153.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="66.1666666666667,97.234762979684"
+              Start="0,0"
+              End="66.1666666666667,89.734762979684">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.7168913943579" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.7168913943579"
+                    Point2="0,57.7168913943579"
+                    Point3="4,57.7168913943579" />
+                  <mssgle:LineSegment
+                    End="62.1666666666667,57.7168913943579" />
+                  <mssgle:CubicBezierSegment
+                    Point1="62.1666666666667,57.7168913943579"
+                    Point2="66.1666666666667,57.7168913943579"
+                    Point3="66.1666666666667,61.7168913943579" />
+                  <mssgle:LineSegment
+                    End="66.1666666666667,89.734762979684" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano1]"
+          TopLeft="478,155.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-65.1666666666667,95.234762979684"
+              Start="0,0"
+              End="-65.1666666666667,87.734762979684">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5297256189568" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,52.5297256189568"
+                    Point2="0,56.5297256189568"
+                    Point3="-4,56.5297256189568" />
+                  <mssgle:LineSegment
+                    End="-61.1666666666667,56.5297256189568" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-61.1666666666667,56.5297256189568"
+                    Point2="-65.1666666666667,56.5297256189568"
+                    Point3="-65.1666666666667,60.5297256189568" />
+                  <mssgle:LineSegment
+                    End="-65.1666666666667,87.734762979684" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de Unión de todo 1]"
+          TopLeft="388.75,292.734762979684">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.265237020316"
+              Start="0,0"
+              End="0,55.765237020316">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.765237020316" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Tarea Flujo de datos\Unión Viajes"
+          TopLeft="632,247" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano2]"
+          TopLeft="623.5,156.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="55.8333333333334,90.5"
+              Start="0,0"
+              End="55.8333333333334,83">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.6776504297994" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49.6776504297994"
+                    Point2="0,53.6776504297994"
+                    Point3="4,53.6776504297994" />
+                  <mssgle:LineSegment
+                    End="51.8333333333334,53.6776504297994" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.8333333333334,53.6776504297994"
+                    Point2="55.8333333333334,53.6776504297994"
+                    Point3="55.8333333333334,57.6776504297994" />
+                  <mssgle:LineSegment
+                    End="55.8333333333334,83" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano3]"
+          TopLeft="773.5,157.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-50.8333333333334,89.5"
+              Start="0,0"
+              End="-50.8333333333334,82">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.0845272206304" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49.0845272206304"
+                    Point2="0,53.0845272206304"
+                    Point3="-4,53.0845272206304" />
+                  <mssgle:LineSegment
+                    End="-46.8333333333334,53.0845272206304" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-46.8333333333334,53.0845272206304"
+                    Point2="-50.8333333333334,53.0845272206304"
+                    Point3="-50.8333333333334,57.0845272206304" />
+                  <mssgle:LineSegment
+                    End="-50.8333333333334,82" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Tarea Flujo de datos\Destino de archivo plano 1"
+          TopLeft="591,359" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de Unión de todo 11]"
+          TopLeft="697.5,289">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70"
+              Start="0,0"
+              End="0,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
