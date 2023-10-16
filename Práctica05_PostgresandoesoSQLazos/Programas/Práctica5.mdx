@@ -1,0 +1,54 @@
+// Consulta 1
+SELECT
+	{[Measures].[Recuento Fact Internet Sales], [Measures].[Sales Amount], [Measures].[Order Quantity]} ON COLUMNS,
+	{[Dim Customer].[First Name]} ON ROWS
+FROM [Adventure Works DW2012]
+WHERE (
+	[Order Date].[Calendar Year].&[2011] : [Order Date].[Calendar Year].&[2012]
+)
+
+
+// Consulta 2
+SELECT
+	{[Measures].[Sales Amount]} ON COLUMNS,
+	CROSSJOIN(
+		{} // SEXO
+		{} // ESTADO CIVIL
+	) ON ROWS
+FROM [Adventure Works DW2012]
+
+
+// Consulta 3
+SELECT 
+	{[Measures].[Recuento Fact Internet Sales], [Measures].[Sales Amount]} ON COLUMNS,
+	{[Sales Territory].[Sales Territory Key]} ON ROWS
+FROM [Adventure Works DW2012]
+WHERE (
+	[Dim Product].[Spanish Product Category Name].&[Bicicleta],
+	[Order Date].[Calendar Year].&[2013]
+)
+
+
+// Consulta 4
+SELECT
+	TOPCOUNT(
+		[Dim Product].[Spanish Product Name],
+		5,
+		[Measures].[Sales Amount]
+	) ON COLUMNS, 
+	[Measures].[Sales Amount] ON ROWS
+FROM [Adventure Works DW2012];
+
+
+// Consulta 5
+SELECT 
+	BOTTOMCOUNT(
+		Filter(
+			[Dim Product].[Spanish Product Name],
+			[Measures].[Sales Amount] > 0
+		),
+		5, 
+		[Measures].[Sales Amount]
+	) ON COLUMNS,
+	{[Measures].[Sales Amount]} ON ROWS
+FROM [Adventure Works DW2012];
