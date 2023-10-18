@@ -49,6 +49,9 @@ SELECT
 		),
 		5, 
 		[Measures].[Sales Amount]
-	) ON COLUMNS,
-	{[Measures].[Sales Amount]} ON ROWS
-FROM [Adventure Works DW2012];
+
+// Problema Adaptado
+SELECT {[Measures].[Sales Amount]} ON COLUMNS,  
+NON EMPTY  
+{[Order Date].[Fecha].[Calendar Year].MEMBERS} ON ROWS  
+FROM [Adventure Works DW2012]  
