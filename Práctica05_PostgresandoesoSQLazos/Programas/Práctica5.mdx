@@ -1,54 +1,60 @@
-// Consulta 1
+-- Consulta 1
+
+WITH MEMBER [Dim Customer].[Sales Territory Key].[Clientes UK] AS
+			[Dim Customer].[Sales Territory Key].&[6]
 SELECT
-	{[Measures].[Recuento Fact Internet Sales], [Measures].[Sales Amount], [Measures].[Order Quantity]} ON COLUMNS,
-	{[Dim Customer].[First Name]} ON ROWS
+	{[Measures].[Sales Amount], [Measures].[Order Quantity]} ON COLUMNS,
+	{[Dim Customer].[Sales Territory Key].[Clientes UK]} ON ROWS
 FROM [Adventure Works DW2012]
-WHERE (
-	[Order Date].[Calendar Year].&[2011] : [Order Date].[Calendar Year].&[2012]
-)
+WHERE {[Order Date].[Calendar Year].&[2011], 
+	   [Order Date].[Calendar Year].&[2012]};
 
-
-// Consulta 2
 SELECT
-	{[Measures].[Sales Amount]} ON COLUMNS,
-	CROSSJOIN(
-		{} // SEXO
-		{} // ESTADO CIVIL
+	{[Measures].[Sales Amount], [Measures].[Order Quantity]} ON COLUMNS,
+	{[Order Date].[Calendar Year].&[2011], 
+	 [Order Date].[Calendar Year].&[2012]} ON ROWS
+FROM [Adventure Works DW2012]
+WHERE [Dim Customer].[Sales Territory Key].&[6];
+
+-- Consulta 2
+SELECT
+	NON EMPTY [Measures].[Sales Amount] ON COLUMNS,
+	NON EMPTY CROSSJOIN(
+		{[Dim Customer].[Marital Status].CHILDREN},
+		 {[Dim Customer].[Gender].CHILDREN}
 	) ON ROWS
-FROM [Adventure Works DW2012]
-
-
-// Consulta 3
-SELECT 
-	{[Measures].[Recuento Fact Internet Sales], [Measures].[Sales Amount]} ON COLUMNS,
-	{[Sales Territory].[Sales Territory Key]} ON ROWS
-FROM [Adventure Works DW2012]
-WHERE (
-	[Dim Product].[Spanish Product Category Name].&[Bicicleta],
-	[Order Date].[Calendar Year].&[2013]
-)
-
-
-// Consulta 4
-SELECT
-	TOPCOUNT(
-		[Dim Product].[Spanish Product Name],
-		5,
-		[Measures].[Sales Amount]
-	) ON COLUMNS, 
-	[Measures].[Sales Amount] ON ROWS
 FROM [Adventure Works DW2012];
 
 
-// Consulta 5
+-- Consulta 3
 SELECT 
-	BOTTOMCOUNT(
-		Filter(
-			[Dim Product].[Spanish Product Name],
-			[Measures].[Sales Amount] > 0
-		),
-		5, 
+	NON EMPTY {[Measures].[Order Quantity]} ON COLUMNS,
+	NON EMPTY {[Dim Sales Territory].[Sales Territory Country].CHILDREN} ON ROWS
+FROM [Adventure Works DW2012]
+WHERE ([Dim Product].[Spanish Product Category Name].&[Bicicleta],
+	   [Order Date].[Calendar Year].&[2013]);
+
+
+-- Consulta 4
+SELECT
+	{[Measures].[Order Quantity]} ON COLUMNS,  
+	{TOPCOUNT(
+		[Dim Product].[Spanish Product Name].CHILDREN,
+		5,
 		[Measures].[Sales Amount]
-	) ON COLUMNS,
-	{[Measures].[Sales Amount]} ON ROWS
+	)} ON ROWS
+FROM [Adventure Works DW2012];
+
+
+-- Consulta 5
+SELECT 
+	{[Measures].[Order Quantity]} ON COLUMNS,
+	 NONEMPTY(
+	{BOTTOMCOUNT(
+		Filter(
+			[Dim Product].[Spanish Product Name].MEMBERS,
+			[Measures].[Sales Amount] > 0
+		), 
+	5, [Measures].[Sales Amount]
+	)}) ON ROWS
 FROM [Adventure Works DW2012];

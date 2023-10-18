@@ -6,6 +6,32 @@
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3181" scrolltop="201" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10927" y="8625" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimDate" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4524" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000ac11000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimDate" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -21,15 +47,15 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>0</Value>
+      <Value>-3181</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>0</Value>
+      <Value>201</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>0</Value>
+      <Value>20</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -38,6 +64,51 @@
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
       <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="50" xmlns="">
+          <Shapes NodeWidth="185">
+            <Shape Id="Date Key" Expanded="false">
+              <Attributes>
+                <Attribute Id="Date Key" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Spanish Day Name Of Week" Expanded="false">
+              <Attributes>
+                <Attribute Id="Spanish Day Name Of Week" />
+              </Attributes>
+              <Position x="256" y="20" />
+            </Shape>
+            <Shape Id="Spanish Month Name" Expanded="false">
+              <Attributes>
+                <Attribute Id="Spanish Month Name" />
+              </Attributes>
+              <Position x="256" y="68" />
+            </Shape>
+            <Shape Id="Calendar Quarter" Expanded="false">
+              <Attributes>
+                <Attribute Id="Calendar Quarter" />
+              </Attributes>
+              <Position x="256" y="116" />
+            </Shape>
+            <Shape Id="Calendar Semester" Expanded="false">
+              <Attributes>
+                <Attribute Id="Calendar Semester" />
+              </Attributes>
+              <Position x="256" y="164" />
+            </Shape>
+            <Shape Id="Calendar Year" Expanded="false">
+              <Attributes>
+                <Attribute Id="Calendar Year" />
+              </Attributes>
+              <Position x="256" y="212" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
     </Annotation>
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
@@ -67,25 +138,25 @@
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="a60c7491-579a-44fa-b5f1-93d2dd938c5d">
-          <AttributeID>Spanish Day Name Of Week</AttributeID>
-          <Name>Spanish Day Name Of Week</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="ff19feb0-a8a2-4386-97d8-79919d734648">
-          <AttributeID>Spanish Month Name</AttributeID>
-          <Name>Spanish Month Name</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="35550961-4ce2-42a0-a413-1615ff560f5b">
-          <AttributeID>Calendar Quarter</AttributeID>
-          <Name>Calendar Quarter</Name>
-        </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="198e029b-e7bc-46ba-b992-164f606cfc35">
           <AttributeID>Calendar Year</AttributeID>
           <Name>Calendar Year</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="0ff5b484-1a64-407d-a5c6-7479479a2a6b">
+        <AttributeRelationship dwd:design-time-name="5d4774b6-a608-4386-b9e6-99d6ede3617f">
           <AttributeID>Calendar Semester</AttributeID>
           <Name>Calendar Semester</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9b08b9c7-6dd4-4337-9110-be2467e701a2">
+          <AttributeID>Calendar Quarter</AttributeID>
+          <Name>Calendar Quarter</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6141362b-eaa7-4b1a-985f-243680ad2076">
+          <AttributeID>Spanish Month Name</AttributeID>
+          <Name>Spanish Month Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ac95eca0-f4aa-461f-92e7-4b9de97cd0a0">
+          <AttributeID>Spanish Day Name Of Week</AttributeID>
+          <Name>Spanish Day Name Of Week</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -180,5 +251,38 @@
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
   </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="4699f4ef-ee94-49ad-9ee4-9f21ac31eb62">
+      <ID>Jerarquía</ID>
+      <Name>Fecha</Name>
+      <Levels>
+        <Level dwd:design-time-name="ecee1254-1d0b-46da-b5a2-03ebce7c6f24">
+          <ID>Calendar Year</ID>
+          <Name>Calendar Year</Name>
+          <SourceAttributeID>Calendar Year</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="cc554858-e14d-48c0-b1b5-4c577fc9b39c">
+          <ID>Calendar Semester</ID>
+          <Name>Calendar Semester</Name>
+          <SourceAttributeID>Calendar Semester</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="58eb17de-3aeb-470e-9f83-5901eaad7cf2">
+          <ID>Calendar Quarter</ID>
+          <Name>Calendar Quarter</Name>
+          <SourceAttributeID>Calendar Quarter</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="b7adf2d9-f9b7-4eaf-bf4c-90143867dd34">
+          <ID>Spanish Month Name</ID>
+          <Name>Spanish Month Name</Name>
+          <SourceAttributeID>Spanish Month Name</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="af5c4ecf-01c1-4ca3-bdfb-174e6e6da82e">
+          <ID>Spanish Day Name Of Week</ID>
+          <Name>Spanish Day Name Of Week</Name>
+          <SourceAttributeID>Spanish Day Name Of Week</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
   <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
 </Dimension>
