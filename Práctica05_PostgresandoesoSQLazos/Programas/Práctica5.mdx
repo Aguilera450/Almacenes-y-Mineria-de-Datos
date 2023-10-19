@@ -59,6 +59,30 @@ SELECT
 	)}) ON ROWS
 FROM [Adventure Works DW2012];
 
+-- Consulta Creada 1 
+SELECT
+	{[Measures].[Order Quantity]} ON COLUMNS,  
+	NONEMPTY (
+	{TOPCOUNT(
+		[Dim Promotion].[Spanish Promotion Type].CHILDREN,
+		3,
+		[Measures].[Sales Amount]
+	)}) ON ROWS
+FROM [Adventure Works DW2012];
+
+-- Consulta Creada 2
+SELECT 
+	{([Measures].[Order Quantity]),([Measures].[Sales Amount])} ON COLUMNS,
+	 NONEMPTY(
+	{BOTTOMCOUNT(
+		Filter(
+			[Order Date].[Spanish Month Name].MEMBERS,
+			[Measures].[Order Quantity] > 0
+		), 
+	5, [Measures].[Sales Amount]
+	)}) ON ROWS
+FROM [Adventure Works DW2012];
+
 -- Problema Adaptado
 SELECT {[Measures].[Sales Amount]} ON COLUMNS,  
 NON EMPTY  
