@@ -1,0 +1,18 @@
+-- PRACTICA 06
+
+WITH MEMBER [Measures].[Pedidos] AS COALESCEEMPTY([Measures].[Order Quantity] , 0)
+SELECT 
+	{[Measures].[Pedidos]} ON COLUMNS,
+	{[Order Date].[Calendar Year].CHILDREN} *
+	EXCEPT(
+	{[Dim Product].[Spanish Product Category Name].CHILDREN},
+	{[Dim Product].[Spanish Product Category Name].UNKNOWNMEMBER}
+	) *
+	NONEMPTY ({
+	[Dim Sales Territory].[Sales Territory Country].CHILDREN
+	}) *
+	EXCEPT(
+	{[Dim Customer].[Gender].CHILDREN},
+	{[Dim Customer].[Gender].UNKNOWNMEMBER}
+	) ON ROWS
+FROM [Adventure Works DW2012];

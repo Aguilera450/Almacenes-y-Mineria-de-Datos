@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="Practica4">
+      <rd:DataSourceID>e75ca552-7a5c-4b1f-ac99-b17581d73df9</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>OLEDB-MD</DataProvider>
+        <ConnectString>Data Source=ENGINEER-PC</ConnectString>
+        <IntegratedSecurity>true</IntegratedSecurity>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <rd:ReportID>4f582de3-c57a-42fe-82df-9d9326319028</rd:ReportID>
+  <Width>5in</Width>
+  <Body>
+    <Height>2in</Height>
+    <ColumnSpacing>0.5in</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>20pt</FontSize>
+          <Color>SteelBlue</Color>
+          <FontWeight>Bold</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Value>Reporte</Value>
+        <CanGrow>true</CanGrow>
+        <Height>0.36in</Height>
+      </Textbox>
+      <List Name="List1">
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>14pt</FontSize>
+          <Color>SlateGray</Color>
+        </Style>
+        <ReportItems>
+          <Textbox Name="Calendar_Year">
+            <Style>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>14pt</FontSize>
+              <Color>SlateGray</Color>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <rd:DefaultName>Calendar_Year</rd:DefaultName>
+            <Value>=Fields!Calendar_Year.Value</Value>
+            <CanGrow>true</CanGrow>
+            <Height>0.27in</Height>
+          </Textbox>
+          <List Name="List2">
+            <Style>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>12pt</FontSize>
+            </Style>
+            <ReportItems>
+              <Textbox Name="Sales_Territory_Country">
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+                <rd:DefaultName>Sales_Territory_Country</rd:DefaultName>
+                <Value>=Fields!Sales_Territory_Country.Value</Value>
+                <CanGrow>true</CanGrow>
+                <Height>0.24in</Height>
+              </Textbox>
+              <Table Name="table1">
+                <Top>0.5in</Top>
+                <Style />
+                <Header>
+                  <RepeatOnNewPage>true</RepeatOnNewPage>
+                  <TableRows>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox2">
+                              <Style>
+                                <BackgroundColor>SteelBlue</BackgroundColor>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <BorderColor>
+                                  <Default>LightGrey</Default>
+                                </BorderColor>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <rd:DefaultName>textbox2</rd:DefaultName>
+                              <Value>Spanish Product Category Name</Value>
+                              <CanGrow>true</CanGrow>
+                              <Height>0.22in</Height>
+                              <Width>1in</Width>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox4">
+                              <Style>
+                                <BackgroundColor>SteelBlue</BackgroundColor>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <BorderColor>
+                                  <Default>LightGrey</Default>
+                                </BorderColor>
+                                <TextAlign>Right</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <rd:DefaultName>textbox4</rd:DefaultName>
+                              <Value>Pedidos</Value>
+                              <CanGrow>true</CanGrow>
+                              <Height>0.22in</Height>
+                              <Width>1in</Width>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.22in</Height>
+                    </TableRow>
+                  </TableRows>
+                </Header>
+                <Details>
+                  <TableRows>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox3">
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>10pt</FontSize>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <BorderColor>
+                                  <Default>LightGrey</Default>
+                                </BorderColor>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <rd:DefaultName>textbox3</rd:DefaultName>
+                              <Value>
+                              </Value>
+                              <CanGrow>true</CanGrow>
+                              <Height>0.21in</Height>
+                              <Width>1in</Width>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="Pedidos">
+                              <Style>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>10pt</FontSize>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <BorderColor>
+                                  <Default>LightGrey</Default>
+                                </BorderColor>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <rd:DefaultName>Pedidos</rd:DefaultName>
+                              <Value>=Fields!Pedidos.Value</Value>
+                              <CanGrow>true</CanGrow>
+                              <Height>0.21in</Height>
+                              <Width>1in</Width>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.21in</Height>
+                    </TableRow>
+                  </TableRows>
+                </Details>
+                <TableColumns>
+                  <TableColumn>
+                    <Width>1in</Width>
+                  </TableColumn>
+                  <TableColumn>
+                    <Width>1in</Width>
+                  </TableColumn>
+                </TableColumns>
+                <DataSetName>DataSet1</DataSetName>
+                <TableGroups>
+                  <TableGroup>
+                    <Grouping Name="table1_Spanish_Product_Category_Name">
+                      <GroupExpressions>
+                        <GroupExpression>=Fields!Spanish_Product_Category_Name.Value</GroupExpression>
+                      </GroupExpressions>
+                    </Grouping>
+                    <Sorting>
+                      <SortBy>
+                        <SortExpression>=Fields!Spanish_Product_Category_Name.Value</SortExpression>
+                      </SortBy>
+                    </Sorting>
+                    <Header>
+                      <TableRows>
+                        <TableRow>
+                          <TableCells>
+                            <TableCell>
+                              <ReportItems>
+                                <Textbox Name="Spanish_Product_Category_Name">
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>10pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>White</Color>
+                                    <BackgroundColor>#6e9eca</BackgroundColor>
+                                    <BorderStyle>
+                                      <Default>Solid</Default>
+                                    </BorderStyle>
+                                    <BorderColor>
+                                      <Default>LightGrey</Default>
+                                    </BorderColor>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                  <rd:DefaultName>Spanish_Product_Category_Name</rd:DefaultName>
+                                  <Value>=Fields!Spanish_Product_Category_Name.Value</Value>
+                                  <CanGrow>true</CanGrow>
+                                  <Height>0.21in</Height>
+                                  <Width>1in</Width>
+                                </Textbox>
+                              </ReportItems>
+                            </TableCell>
+                            <TableCell>
+                              <ReportItems>
+                                <Textbox Name="textbox5">
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>10pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>White</Color>
+                                    <BackgroundColor>#6e9eca</BackgroundColor>
+                                    <BorderStyle>
+                                      <Default>Solid</Default>
+                                    </BorderStyle>
+                                    <BorderColor>
+                                      <Default>LightGrey</Default>
+                                    </BorderColor>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                  <rd:DefaultName>textbox5</rd:DefaultName>
+                                  <Value>
+                                  </Value>
+                                  <CanGrow>true</CanGrow>
+                                  <Height>0.21in</Height>
+                                  <Width>1in</Width>
+                                </Textbox>
+                              </ReportItems>
+                            </TableCell>
+                          </TableCells>
+                          <Height>0.21in</Height>
+                        </TableRow>
+                      </TableRows>
+                    </Header>
+                  </TableGroup>
+                </TableGroups>
+              </Table>
+            </ReportItems>
+            <Grouping Name="list1_Sales_Territory_Country">
+              <GroupExpressions>
+                <GroupExpression>=Fields!Sales_Territory_Country.Value</GroupExpression>
+              </GroupExpressions>
+              <PageBreakAtEnd>true</PageBreakAtEnd>
+            </Grouping>
+            <Sorting>
+              <SortBy>
+                <SortExpression>=Fields!Sales_Territory_Country.Value</SortExpression>
+              </SortBy>
+            </Sorting>
+            <Top>0.5in</Top>
+            <DataSetName>DataSet1</DataSetName>
+          </List>
+        </ReportItems>
+        <Grouping Name="list1_Calendar_Year">
+          <GroupExpressions>
+            <GroupExpression>=Fields!Calendar_Year.Value</GroupExpression>
+          </GroupExpressions>
+          <PageBreakAtEnd>true</PageBreakAtEnd>
+        </Grouping>
+        <Sorting>
+          <SortBy>
+            <SortExpression>=Fields!Calendar_Year.Value</SortExpression>
+          </SortBy>
+        </Sorting>
+        <Top>0.36in</Top>
+        <DataSetName>DataSet1</DataSetName>
+      </List>
+    </ReportItems>
+  </Body>
+  <Language>es-ES</Language>
+  <LeftMargin>1in</LeftMargin>
+  <RightMargin>1in</RightMargin>
+  <TopMargin>1in</TopMargin>
+  <BottomMargin>1in</BottomMargin>
+  <PageWidth>8.5in</PageWidth>
+  <PageHeight>11in</PageHeight>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Fields>
+        <Field Name="Calendar_Year">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Order Date].[Calendar Year].[Calendar Year]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Spanish_Product_Category_Name">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Product].[Spanish Product Category Name].[Spanish Product Category Name]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sales_Territory_Country">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Sales Territory].[Sales Territory Country].[Sales Territory Country]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Pedidos">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Pedidos]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>Practica4</DataSourceName>
+        <CommandType>Text</CommandType>
+        <CommandText>WITH MEMBER [Measures].[Pedidos] AS COALESCEEMPTY([Measures].[Order Quantity] , 0)
+SELECT 
+	{[Measures].[Pedidos]} ON COLUMNS,
+	{[Order Date].[Calendar Year].CHILDREN} *
+	EXCEPT(
+	{[Dim Product].[Spanish Product Category Name].CHILDREN},
+	{[Dim Product].[Spanish Product Category Name].UNKNOWNMEMBER}
+	) *
+	NONEMPTY ({
+	[Dim Sales Territory].[Sales Territory Country].CHILDREN
+	}) ON ROWS
+FROM [Adventure Works DW2012];</CommandText>
+        <Timeout>0</Timeout>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Order Date</DimensionName>
+                      <HierarchyName>Calendar Year</HierarchyName>
+                      <HierarchyUniqueName>[Order Date].[Calendar Year]</HierarchyUniqueName>
+                      <LevelName>Calendar Year</LevelName>
+                      <UniqueName>[Order Date].[Calendar Year].[Calendar Year]</UniqueName>
+                    </ID>
+                    <ItemCaption>Calendar Year</ItemCaption>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Product</DimensionName>
+                      <HierarchyName>Spanish Product Category Name</HierarchyName>
+                      <HierarchyUniqueName>[Dim Product].[Spanish Product Category Name]</HierarchyUniqueName>
+                      <LevelName>Spanish Product Category Name</LevelName>
+                      <UniqueName>[Dim Product].[Spanish Product Category Name].[Spanish Product Category Name]</UniqueName>
+                    </ID>
+                    <ItemCaption>Spanish Product Category Name</ItemCaption>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Dim Sales Territory</DimensionName>
+                      <HierarchyName>Sales Territory Country</HierarchyName>
+                      <HierarchyUniqueName>[Dim Sales Territory].[Sales Territory Country]</HierarchyUniqueName>
+                      <LevelName>Sales Territory Country</LevelName>
+                      <UniqueName>[Dim Sales Territory].[Sales Territory Country].[Sales Territory Country]</UniqueName>
+                    </ID>
+                    <ItemCaption>Sales Territory Country</ItemCaption>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>Pedidos</MeasureName>
+                      <UniqueName>[Measures].[Pedidos]</UniqueName>
+                    </ID>
+                    <ItemCaption>Pedidos</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                </Items>
+              </Select>
+              <From>Adventure Works DW2012</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement>
+WITH MEMBER [Measures].[Pedidos] AS COALESCEEMPTY([Measures].[Order Quantity] , 0)
+SELECT 
+	{[Measures].[Pedidos]} ON COLUMNS,
+	{[Order Date].[Calendar Year].CHILDREN} *
+	EXCEPT(
+	{[Dim Product].[Spanish Product Category Name].CHILDREN},
+	{[Dim Product].[Spanish Product Category Name].UNKNOWNMEMBER}
+	) *
+	NONEMPTY ({
+	[Dim Sales Territory].[Sales Territory Country].CHILDREN
+	}) ON ROWS
+FROM [Adventure Works DW2012];
+
+</Statement>
+              <ParameterDefinitions />
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
