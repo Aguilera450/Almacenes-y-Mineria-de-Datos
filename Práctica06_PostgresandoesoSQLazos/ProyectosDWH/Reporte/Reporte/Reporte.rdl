@@ -11,7 +11,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>3.44667in</Height>
+              <Height>5.73833in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -26,7 +26,7 @@
                             </TablixColumns>
                             <TablixRows>
                               <TablixRow>
-                                <Height>2.94667in</Height>
+                                <Height>5.23833in</Height>
                                 <TablixCells>
                                   <TablixCell>
                                     <CellContents>
@@ -561,12 +561,12 @@
                                                       <GroupExpression>=Fields!Spanish_Product_Category_Name.Value</GroupExpression>
                                                     </GroupExpressions>
                                                   </Group>
-                                                  <Label>=Fields!Spanish_Product_Category_Name.Value</Label>
                                                   <SortExpressions>
                                                     <SortExpression>
                                                       <Value>=Fields!Spanish_Product_Category_Name.Value</Value>
                                                     </SortExpression>
                                                   </SortExpressions>
+                                                  <Label>=Fields!Spanish_Product_Category_Name.Value</Label>
                                                 </ChartMember>
                                               </ChartMembers>
                                             </ChartCategoryHierarchy>
@@ -861,11 +861,289 @@
                                               </Style>
                                             </ChartNoDataMessage>
                                             <DataSetName>DataSet1</DataSetName>
-                                            <Top>0.30083in</Top>
+                                            <Top>0.155in</Top>
                                             <Left>5.80083in</Left>
                                             <Height>2.64583in</Height>
                                             <Width>4.6875in</Width>
                                             <ZIndex>1</ZIndex>
+                                            <Style>
+                                              <Border>
+                                                <Color>LightGrey</Color>
+                                                <Style>Solid</Style>
+                                              </Border>
+                                              <BackgroundColor>White</BackgroundColor>
+                                              <BackgroundGradientType>None</BackgroundGradientType>
+                                            </Style>
+                                          </Chart>
+                                          <Chart Name="Chart1">
+                                            <ChartCategoryHierarchy>
+                                              <ChartMembers>
+                                                <ChartMember>
+                                                  <Group Name="Chart1_CategoryGroup">
+                                                    <GroupExpressions>
+                                                      <GroupExpression>=Fields!Spanish_Product_Category_Name.Value</GroupExpression>
+                                                    </GroupExpressions>
+                                                  </Group>
+                                                  <SortExpressions>
+                                                    <SortExpression>
+                                                      <Value>=Fields!Spanish_Product_Category_Name.Value</Value>
+                                                    </SortExpression>
+                                                  </SortExpressions>
+                                                  <Label>=Fields!Spanish_Product_Category_Name.Value</Label>
+                                                </ChartMember>
+                                              </ChartMembers>
+                                            </ChartCategoryHierarchy>
+                                            <ChartSeriesHierarchy>
+                                              <ChartMembers>
+                                                <ChartMember>
+                                                  <Label>Pedidos</Label>
+                                                </ChartMember>
+                                              </ChartMembers>
+                                            </ChartSeriesHierarchy>
+                                            <ChartData>
+                                              <ChartSeriesCollection>
+                                                <ChartSeries Name="Pedidos">
+                                                  <ChartDataPoints>
+                                                    <ChartDataPoint>
+                                                      <ChartDataPointValues>
+                                                        <Y>=Sum(Fields!Pedidos.Value)</Y>
+                                                      </ChartDataPointValues>
+                                                      <ChartDataLabel>
+                                                        <Style />
+                                                      </ChartDataLabel>
+                                                      <Style />
+                                                      <ChartMarker>
+                                                        <Style />
+                                                      </ChartMarker>
+                                                      <DataElementOutput>Output</DataElementOutput>
+                                                    </ChartDataPoint>
+                                                  </ChartDataPoints>
+                                                  <Type>Shape</Type>
+                                                  <Style />
+                                                  <ChartEmptyPoints>
+                                                    <Style />
+                                                    <ChartMarker>
+                                                      <Style />
+                                                    </ChartMarker>
+                                                    <ChartDataLabel>
+                                                      <Style />
+                                                    </ChartDataLabel>
+                                                  </ChartEmptyPoints>
+                                                  <ValueAxisName>Primary</ValueAxisName>
+                                                  <CategoryAxisName>Primary</CategoryAxisName>
+                                                  <ChartSmartLabel>
+                                                    <CalloutLineColor>Black</CalloutLineColor>
+                                                    <MinMovingDistance>0pt</MinMovingDistance>
+                                                  </ChartSmartLabel>
+                                                </ChartSeries>
+                                              </ChartSeriesCollection>
+                                            </ChartData>
+                                            <ChartAreas>
+                                              <ChartArea Name="Default">
+                                                <ChartCategoryAxes>
+                                                  <ChartAxis Name="Primary">
+                                                    <Style>
+                                                      <FontSize>8pt</FontSize>
+                                                    </Style>
+                                                    <ChartAxisTitle>
+                                                      <Caption>Típo de Producto</Caption>
+                                                      <Style>
+                                                        <FontSize>8pt</FontSize>
+                                                      </Style>
+                                                    </ChartAxisTitle>
+                                                    <ChartMajorGridLines>
+                                                      <Enabled>False</Enabled>
+                                                      <Style>
+                                                        <Border>
+                                                          <Color>Gainsboro</Color>
+                                                        </Border>
+                                                      </Style>
+                                                    </ChartMajorGridLines>
+                                                    <ChartMinorGridLines>
+                                                      <Style>
+                                                        <Border>
+                                                          <Color>Gainsboro</Color>
+                                                          <Style>Dotted</Style>
+                                                        </Border>
+                                                      </Style>
+                                                    </ChartMinorGridLines>
+                                                    <ChartMinorTickMarks>
+                                                      <Length>0.5</Length>
+                                                    </ChartMinorTickMarks>
+                                                    <CrossAt>NaN</CrossAt>
+                                                    <Minimum>NaN</Minimum>
+                                                    <Maximum>NaN</Maximum>
+                                                    <ChartAxisScaleBreak>
+                                                      <Style />
+                                                    </ChartAxisScaleBreak>
+                                                  </ChartAxis>
+                                                  <ChartAxis Name="Secondary">
+                                                    <Style>
+                                                      <FontSize>8pt</FontSize>
+                                                    </Style>
+                                                    <ChartAxisTitle>
+                                                      <Caption>Título del eje</Caption>
+                                                      <Style>
+                                                        <FontSize>8pt</FontSize>
+                                                      </Style>
+                                                    </ChartAxisTitle>
+                                                    <ChartMajorGridLines>
+                                                      <Enabled>False</Enabled>
+                                                      <Style>
+                                                        <Border>
+                                                          <Color>Gainsboro</Color>
+                                                        </Border>
+                                                      </Style>
+                                                    </ChartMajorGridLines>
+                                                    <ChartMinorGridLines>
+                                                      <Style>
+                                                        <Border>
+                                                          <Color>Gainsboro</Color>
+                                                          <Style>Dotted</Style>
+                                                        </Border>
+                                                      </Style>
+                                                    </ChartMinorGridLines>
+                                                    <ChartMinorTickMarks>
+                                                      <Length>0.5</Length>
+                                                    </ChartMinorTickMarks>
+                                                    <CrossAt>NaN</CrossAt>
+                                                    <Location>Opposite</Location>
+                                                    <Minimum>NaN</Minimum>
+                                                    <Maximum>NaN</Maximum>
+                                                    <ChartAxisScaleBreak>
+                                                      <Style />
+                                                    </ChartAxisScaleBreak>
+                                                  </ChartAxis>
+                                                </ChartCategoryAxes>
+                                                <ChartValueAxes>
+                                                  <ChartAxis Name="Primary">
+                                                    <Style>
+                                                      <FontSize>8pt</FontSize>
+                                                    </Style>
+                                                    <ChartAxisTitle>
+                                                      <Caption>Numero de Pedidos</Caption>
+                                                      <Style>
+                                                        <FontSize>8pt</FontSize>
+                                                      </Style>
+                                                    </ChartAxisTitle>
+                                                    <ChartMajorGridLines>
+                                                      <Style>
+                                                        <Border>
+                                                          <Color>Gainsboro</Color>
+                                                        </Border>
+                                                      </Style>
+                                                    </ChartMajorGridLines>
+                                                    <ChartMinorGridLines>
+                                                      <Style>
+                                                        <Border>
+                                                          <Color>Gainsboro</Color>
+                                                          <Style>Dotted</Style>
+                                                        </Border>
+                                                      </Style>
+                                                    </ChartMinorGridLines>
+                                                    <ChartMinorTickMarks>
+                                                      <Length>0.5</Length>
+                                                    </ChartMinorTickMarks>
+                                                    <CrossAt>NaN</CrossAt>
+                                                    <Minimum>NaN</Minimum>
+                                                    <Maximum>NaN</Maximum>
+                                                    <ChartAxisScaleBreak>
+                                                      <Style />
+                                                    </ChartAxisScaleBreak>
+                                                  </ChartAxis>
+                                                  <ChartAxis Name="Secondary">
+                                                    <Style>
+                                                      <FontSize>8pt</FontSize>
+                                                    </Style>
+                                                    <ChartAxisTitle>
+                                                      <Caption>Título del eje</Caption>
+                                                      <Style>
+                                                        <FontSize>8pt</FontSize>
+                                                      </Style>
+                                                    </ChartAxisTitle>
+                                                    <ChartMajorGridLines>
+                                                      <Style>
+                                                        <Border>
+                                                          <Color>Gainsboro</Color>
+                                                        </Border>
+                                                      </Style>
+                                                    </ChartMajorGridLines>
+                                                    <ChartMinorGridLines>
+                                                      <Style>
+                                                        <Border>
+                                                          <Color>Gainsboro</Color>
+                                                          <Style>Dotted</Style>
+                                                        </Border>
+                                                      </Style>
+                                                    </ChartMinorGridLines>
+                                                    <ChartMinorTickMarks>
+                                                      <Length>0.5</Length>
+                                                    </ChartMinorTickMarks>
+                                                    <CrossAt>NaN</CrossAt>
+                                                    <Location>Opposite</Location>
+                                                    <Minimum>NaN</Minimum>
+                                                    <Maximum>NaN</Maximum>
+                                                    <ChartAxisScaleBreak>
+                                                      <Style />
+                                                    </ChartAxisScaleBreak>
+                                                  </ChartAxis>
+                                                </ChartValueAxes>
+                                                <Style>
+                                                  <BackgroundGradientType>None</BackgroundGradientType>
+                                                </Style>
+                                              </ChartArea>
+                                            </ChartAreas>
+                                            <ChartLegends>
+                                              <ChartLegend Name="Default">
+                                                <Style>
+                                                  <BackgroundGradientType>None</BackgroundGradientType>
+                                                  <FontSize>8pt</FontSize>
+                                                </Style>
+                                                <ChartLegendTitle>
+                                                  <Caption />
+                                                  <Style>
+                                                    <FontSize>8pt</FontSize>
+                                                    <FontWeight>Bold</FontWeight>
+                                                    <TextAlign>Center</TextAlign>
+                                                  </Style>
+                                                </ChartLegendTitle>
+                                                <HeaderSeparatorColor>Black</HeaderSeparatorColor>
+                                                <ColumnSeparatorColor>Black</ColumnSeparatorColor>
+                                              </ChartLegend>
+                                            </ChartLegends>
+                                            <ChartTitles>
+                                              <ChartTitle Name="Default">
+                                                <Caption>="Total de Pedidos - " + Parameters!pais.Value + " " + Parameters!año.Value</Caption>
+                                                <Style>
+                                                  <BackgroundGradientType>None</BackgroundGradientType>
+                                                  <FontWeight>Bold</FontWeight>
+                                                  <TextAlign>General</TextAlign>
+                                                  <VerticalAlign>Top</VerticalAlign>
+                                                </Style>
+                                              </ChartTitle>
+                                            </ChartTitles>
+                                            <Palette>BrightPastel</Palette>
+                                            <ChartBorderSkin>
+                                              <Style>
+                                                <BackgroundColor>Gray</BackgroundColor>
+                                                <BackgroundGradientType>None</BackgroundGradientType>
+                                                <Color>White</Color>
+                                              </Style>
+                                            </ChartBorderSkin>
+                                            <ChartNoDataMessage Name="NoDataMessage">
+                                              <Caption>Sin datos disponibles</Caption>
+                                              <Style>
+                                                <BackgroundGradientType>None</BackgroundGradientType>
+                                                <TextAlign>General</TextAlign>
+                                                <VerticalAlign>Top</VerticalAlign>
+                                              </Style>
+                                            </ChartNoDataMessage>
+                                            <DataSetName>DataSet1</DataSetName>
+                                            <Top>2.98833in</Top>
+                                            <Left>5.80083in</Left>
+                                            <Height>2.25in</Height>
+                                            <Width>4.6875in</Width>
+                                            <ZIndex>2</ZIndex>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -916,7 +1194,7 @@
                             <BreakLocation>End</BreakLocation>
                           </PageBreak>
                           <Top>0.5in</Top>
-                          <Height>2.94667in</Height>
+                          <Height>5.23833in</Height>
                           <Width>10.72917in</Width>
                           <Style>
                             <FontFamily>Tahoma</FontFamily>
@@ -967,7 +1245,8 @@
                                   <Value>=Parameters!pais.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontSize>14pt</FontSize>
+                                    <Color>DimGray</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1030,7 +1309,7 @@
           <BreakLocation>End</BreakLocation>
         </PageBreak>
         <Top>0.5in</Top>
-        <Height>3.44667in</Height>
+        <Height>5.73833in</Height>
         <Width>10.72917in</Width>
         <Style>
           <FontFamily>Tahoma</FontFamily>
@@ -1086,7 +1365,7 @@
         </Style>
       </Image>
     </ReportItems>
-    <Height>3.94667in</Height>
+    <Height>6.23833in</Height>
     <Style />
   </Body>
   <Width>11.05208in</Width>
@@ -1396,7 +1675,20 @@ FROM [Adventure Works DW2012];</Statement>
   <ReportParameters>
     <ReportParameter Name="pais">
       <DataType>String</DataType>
-      <Prompt>Ingrese el pais</Prompt>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>pais</DataSetName>
+          <ValueField>Sales_Territory_Country</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Selecciones el pais</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>pais</DataSetName>
+          <ValueField>Sales_Territory_Country</ValueField>
+          <LabelField>Sales_Territory_Country</LabelField>
+        </DataSetReference>
+      </ValidValues>
     </ReportParameter>
     <ReportParameter Name="año">
       <DataType>String</DataType>
@@ -1406,7 +1698,14 @@ FROM [Adventure Works DW2012];</Statement>
           <ValueField>Calendar_Year</ValueField>
         </DataSetReference>
       </DefaultValue>
-      <Prompt>Ingrese el año</Prompt>
+      <Prompt>Seleccione el año</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>año</DataSetName>
+          <ValueField>Calendar_Year</ValueField>
+          <LabelField>Calendar_Year</LabelField>
+        </DataSetReference>
+      </ValidValues>
     </ReportParameter>
   </ReportParameters>
   <EmbeddedImages>
