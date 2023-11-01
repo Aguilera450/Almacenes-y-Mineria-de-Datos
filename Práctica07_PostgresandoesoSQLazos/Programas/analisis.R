@@ -65,3 +65,9 @@ cat("Valores negativos en las ventas globales:", sum(vgsales$EU_Sales < 0), "\n"
 cat("Valores negativos en las ventas globales:", sum(vgsales$JP_Sales < 0), "\n")
 cat("Valores negativos en las ventas globales:", sum(vgsales$Other_Sales < 0), "\n")
 cat("Valores negativos en las ventas globales:", sum(vgsales$Global_Sales < 0), "\n")
+
+# Graficacion de frecuencias de las columnas Platform, Year, Genre y Publisher
+barplot(table(videojuegos$Platform), main = "Frecuencia de Plataformas", col = "red", border = "blue")
+barplot(table(videojuegos$Year), main = "Frecuencia de Años", col = "red", border = "blue")
+barplot(table(videojuegos$Genre), main = "Frecuencia de Generos", col = "red", border = "blue")
+barplot(table(videojuegos$Publisher), main = "Frecuencia de Editores", col = "red", border = "blue")
