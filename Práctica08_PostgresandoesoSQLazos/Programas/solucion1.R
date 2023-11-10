@@ -8,8 +8,8 @@ summary(vgsales)
 head(vgsales)
 
 # ---- Limpieza de datos ----
-#Hacemos el csv limpio
-vgsalesLimpio <- vgsales
+# Quitamos los campos que tienen NA
+vgsalesLimpio <- replace(vgsales, is.na(vgsales), 0)
 
 # Ponemos las plataformas en mayusculas
 vgsalesLimpio$Platform <- toupper(vgsalesLimpio$Platform)
