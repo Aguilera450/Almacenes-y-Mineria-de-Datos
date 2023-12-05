@@ -5,7 +5,7 @@ library(dplyr)
 # Leyendo el conjunto de datos
 archivoTerrorism <- file.choose() # Escogiendo el archivo "globalterrorismdb_0718dist.csv"
 globalTerr <- read.csv(file = archivoTerrorism, header = T, stringsAsFactors = F)
-globalTerr <- tibble::as.tibble(globalTerr)
+globalTerr <- tibble::as_tibble(globalTerr)
 globalTerr
 
 
@@ -21,27 +21,34 @@ str(globalTerr)
 install.packages("mice")
 library(mice)
 # Colcando la media o mediana en las variables numericas
-globalTerr_inputados <- mice(globalTerr, method = "pmm", m = 5, seed = 500)
-globalTerr_inputados <- complete(globalTerr_inputados)
-str(globalTerr_inputados)
-globalTerr_inputados
+globalTerr_imputados <- mice(globalTerr, method = "pmm", m = 5, maxit = 50, seed = 500)
+globalTerr_imputados <- complete(globalTerr_imputados)
+globalTerr_imputados <- tibble::as.tibble(globalTerr_imputados)
+globalTerr_imputados
+str(globalTerr_imputados)
 
 # Colocando la moda de las otras variables
-for (col in names(globalTerr_inputados)) {
+for (col in names(globalTerr_imputados)) {
   if (class(globalTerr[[col]]) == "character" && sum(is.na(globalTerr[[col]])) > 0) {
-    globalTerr_inputados[[col]] <- factor(globalTerr_inputados[[col]])
-    globalTerr_inputados[[col]] <- as.character(imputeMode(globalTerr_inputados[[col]]))
+    globalTerr_imputados[[col]] <- factor(globalTerr_imputados[[col]])
+    globalTerr_imputados[[col]] <- as.character(imputeMode(globalTerr_imputados[[col]]))
   }
 }
 
-globalTerr_inputados <- complete(globalTerr_inputados)
-str(globalTerr_inputados)
-globalTerr_inputados
+globalTerr_inputados <- complete(globalTerr_imputados)
+str(globalTerr_imputados)
+globalTerr_imputados
+
 
 # Eliminando valores atipicos
-names(globalTerr_inputados)
-attach(globalTerr_inputados)
-table(country_txt)
+names(globalTerr_imputados)
+attach(globalTerr_imputados)
+table(nwound)
+
+# Para identificar los valores atipicos
+install.packages("ggplot2")
+library(ggplot2)
+boxplot(nwound, main = "Boxplot", ylab = "nwound")
 
 
 
@@ -51,5 +58,5 @@ library(funModeling)
 
 
 # Guardando los datos preprocesados
-write.csv(globalTerr_inputados, file = "datosPrepTerrorismo.csv", row.names = FALSE)
+write.csv(globalTerr_imputados, file = "datosPrepTerrorismo.csv", row.names = FALSE)
 
