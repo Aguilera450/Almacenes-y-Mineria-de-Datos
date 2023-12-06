@@ -90,30 +90,41 @@ summary(globalTerrSinAtipicos)
 
 # Discretizando atributos numericos ========================
 
-cortesIyear <- c(1969,1979,1989,1999,2009,2019)
-cortesImonth <- c(0,2,4,6,8,10,12)
-cortesIDay <- c(0,10,20,31)
-cortesNperps <- c(-100,0,1,max(globalTerrSinAtipicos$nperps))
+#cortesIyear <- c(1969,1979,1989,1999,2009,2019)
+#cortesImonth <- c(0,2,4,6,8,10,12)
+#cortesIDay <- c(0,10,20,31)
+#cortesNperps <- c(-100,0,1,max(globalTerrSinAtipicos$nperps))
 
+
+#globalTerrDiscretizado <- globalTerrSinAtipicos %>%
+#  mutate(
+#    iyearDis = cut(iyear, breaks = cortesIyear, labels = c("70s", "80s", "90s", "00s", "10s")),
+#    imonthDis = cut(imonth, breaks = cortesImonth, labels = c("1er", "2do", "3er", "4to", "5to", "6to")),
+#    idayDis = cut(iday, breaks = cortesIDay, labels = c("1er tercio", "2do tercio", "3er tercio")),
+#    successDis = ifelse(nwound == 1, "Exitoso","Fallido"),
+#    suicideDis = ifelse(nwound == 1, "Suicida","No suicida"),
+#    nkillDis = ifelse(nwound == 1, "Con decesos","Sin decesos"),
+#    nwoundDis = ifelse(nwound == 1, "Con heridos","Sin heridos"),
+#    nperpsDis = cut(nperps, breaks = cortesNperps, labels = c("Desconocido", "Independiente", "Grupal")),
+#    crit1Dis = ifelse(nwound == 1, "Si","No"),
+#    crit2Dis = ifelse(nwound == 1, "Si","No"),
+#    crit3Dis = ifelse(nwound == 1, "Si","No")
+#  )
+
+ 
 globalTerrDiscretizado <- globalTerrSinAtipicos %>%
   mutate(
-    iyearDis = cut(iyear, breaks = cortesIyear, labels = c("70s", "80s", "90s", "00s", "10s")),
-    imonthDis = cut(imonth, breaks = cortesImonth, labels = c("1er", "2do", "3er", "4to", "5to", "6to")),
-    idayDis = cut(iday, breaks = cortesIDay, labels = c("1er tercio", "2do tercio", "3er tercio")),
-    successDis = ifelse(nwound == 1, "Exitoso","Fallido"),
-    suicideDis = ifelse(nwound == 1, "Suicida","No suicida"),
-    nkillDis = ifelse(nwound == 1, "Con decesos","Sin decesos"),
-    nwoundDis = ifelse(nwound == 1, "Con heridos","Sin heridos"),
-    nperpsDis = cut(nperps, breaks = cortesNperps, labels = c("Desconocido", "Independiente", "Grupal")),
-    crit1Dis = ifelse(nwound == 1, "Si","No"),
-    crit2Dis = ifelse(nwound == 1, "Si","No"),
-    crit3Dis = ifelse(nwound == 1, "Si","No")
+    success = ifelse(nwound == 1, "Exitoso","Fallido"),
+    suicide = ifelse(nwound == 1, "Suicida","No suicida"),
+    crit1 = ifelse(nwound == 1, "Si","No"),
+    crit2 = ifelse(nwound == 1, "Si","No"),
+    crit3 = ifelse(nwound == 1, "Si","No")
   )
-
-globalTerrDiscretizado <- globalTerrDiscretizado %>%
-  select(-one_of(c("iyear", "imonth", "iday", "success", "suicide", "nkill", "nwound", "nperps", 
-                   "crit1", "crit2", "crit3")))
+ 
+#globalTerrDiscretizado <- globalTerrDiscretizado %>%
+#  select(-one_of(c("iyear", "imonth", "iday", "success", "suicide", "nkill", "nwound", "nperps", 
+#                   "crit1", "crit2", "crit3")))
 
 print(globalTerrDiscretizado)
 # Guardando los datos preprocesados
-write.csv(globalTerr_imputados, file = "datosPrepTerrorismo.csv", row.names = FALSE)
+write.csv(globalTerrDiscretizado, file = "datosPrepTerrorismo.csv", row.names = FALSE)
