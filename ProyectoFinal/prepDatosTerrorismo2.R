@@ -59,14 +59,14 @@ globalTerrSinAtipicos <- globalTerr_imputados %>%
   filter(limpiar_numerico(iyear),
          limpiar_numerico(imonth),
          limpiar_numerico(iday),
-         limpiar_numerico(success),
-         limpiar_numerico(suicide),
+         #limpiar_numerico(success),
+         #limpiar_numerico(suicide),
          limpiar_numerico(nkill),
          limpiar_numerico(nwound),
          limpiar_numerico(nperps),
-         limpiar_numerico(crit1),
-         limpiar_numerico(crit2),
-         limpiar_numerico(crit3)
+         #limpiar_numerico(crit1)
+         #limpiar_numerico(crit2)
+         #limpiar_numerico(crit3)
          )
 
 # Filtrar filas sin valores nulos en columnas de cadenas
