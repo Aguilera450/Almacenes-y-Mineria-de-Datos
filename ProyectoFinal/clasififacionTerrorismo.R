@@ -5,6 +5,13 @@ globalTerr
 names(globalTerr)
 attach(globalTerr)
 
+install.packages('caTools')
+library(caTools)
+
+sample_data = sample.split(globalTerr, SplitRatio = 0.8)
+train_data <- subset(globalTerr, sample_data == TRUE)
+test_data <- subset(globalTerr, sample_data == FALSE)
+
 install.packages("rpart")
 install.packages("rpart.plot")
 library(rpart)
@@ -14,7 +21,7 @@ library(rpart.plot)
 
 arbolSuccess <- rpart(
   country_txt ~ .,
-  data = globalTerr,
+  data = train_data,
   method = "class",
   control = rpart.control(
     minsplit = 5,   # Número mínimo de observaciones requeridas para dividir un nodo (ajustado a 10)
@@ -26,7 +33,7 @@ prp(arbolSuccess)
 
 arbolSuccess <- rpart(
   country_txt ~ .,
-  data = globalTerr,
+  data = train_data,
   method = "class",
   control = rpart.control(
     minsplit = 10,   # Número mínimo de observaciones requeridas para dividir un nodo (ajustado a 10)
@@ -38,7 +45,7 @@ prp(arbolSuccess)
 
 arbolSuccess <- rpart(
   country_txt ~ .,
-  data = globalTerr,
+  data = train_data,
   method = "class",
   control = rpart.control(
     minsplit = 1,   # Número mínimo de observaciones requeridas para dividir un nodo (ajustado a 10)
